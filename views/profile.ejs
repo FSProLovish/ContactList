@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%=title%></title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+  <body>
+    <div class="card">
+      <% for(let i of details) { %>
+      <h1><i class="fas fa-user"></i><%=i.name%></h1>
+      <h3><i class="fas fa-book"></i><%=i.course%></h3>
+      <h3><i class="fas fa-university"></i><%=i.college%></h3>
+      <h3><i class="fas fa-envelope"></i><%=i.email%></h3>
+      <% } %>
+    </div>
+  </body>
+</html>

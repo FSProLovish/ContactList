@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+  <title>Update The Contact</title>
+</head>
+<body>
+  <form id="new-contact-form" action="/update-contact" method="post">
+    <input type="text" value="<%=id%>" name="id">
+    <input type="text" name="name" placeholder="Enter Name" required />
+    <input type="number" name="phone" placeholder="Enter Contact" required />
+    <button type="submit">Update Contact</button>
+  </form>
+</body>
+</html>

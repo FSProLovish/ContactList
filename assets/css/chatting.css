@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+}
+
+.window {
+  width: 25vw;
+  height: 50vh;
+  background-color: whitesmoke;
+}
+
+.header {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(0, 183, 255);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .person {
+  font-size: 25px;
+  margin: 5px;
+}
+
+.header .share {
+  font-size: 25px;
+}
+
+.header .share > i {
+  margin: 5px;
+}
+
+.screen {
+  border: 2px solid darkorange;
+  height: 80%;
+}
+
+.footer {
+  width: 100%;
+  background-color: cadetblue;
+  display: flex;
+}
+
+.text-box {
+  width: 90%;
+  margin: 5px;
+}
+
+.text-box input {
+  width: 100%;
+}
+
+.send {
+  width: 10%;
+  margin: 5px;
+}
+
+.send button {
+  background-color: rgb(115, 247, 7);
+  color: black;
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+body {
+  background-color: lightgoldenrodyellow;
+  font-family: cursive;
+}
+
+.card {
+  background-color: whitesmoke;
+}
+
+i {
+  color: rgb(7, 167, 207);
+  margin: 5px;
+}
