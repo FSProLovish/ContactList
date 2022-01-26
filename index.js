@@ -13,6 +13,18 @@ app.use(express.urlencoded());
 
 app.use(express.static("assets"));
 
+// Socket for Chat
+const server = require("http").createServer(app);
+const io = require("socket.io")(server, { cors: { origin: "*" } });
+
+// To Start Chat Server
+io.on("connection", (socket) => {
+  console.log("Token", socket.id);
+  socket.on("message", (data) => {
+    socket.broadcast.emit("message", data);
+  });
+});
+
 // // Middleware 1
 // app.use(function (req, res, next) {
 //   console.log("Middleware 1");
@@ -48,6 +60,11 @@ var details = [
 // To render Chatting
 app.get("/chatting", (req, res) => {
   return res.render("chatting");
+});
+
+// To render Chat_box
+app.get("/chat", (req, res) => {
+  return res.render("chat_box");
 });
 
 // To render Profile
@@ -127,7 +144,7 @@ app.get("/delete-contact", (req, res) => {
 });
 
 // To Start Our Server on Port 8000
-app.listen(port, function (err) {
+server.listen(port, function (err) {
   if (err) {
     console.log("error in running the server", err);
   }
